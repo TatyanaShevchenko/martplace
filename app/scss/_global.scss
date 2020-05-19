@@ -1,24 +1,33 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
 
-  a{
-      display: inline-block;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  ul,
-  li{
-      margin: 0;
-      padding: 0;
-      list-style: none;
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-text;
+}
 
-  }
-  body{
-      
-  }
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-family: "Quicksand-Regular";
+  font-size: 16px;
+  line-height: 30px;
+  color: $color-text;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

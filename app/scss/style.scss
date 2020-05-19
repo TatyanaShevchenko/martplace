@@ -1,5 +1,117 @@
-@import 'vars';
-@import 'global';
+@import "vars";
+@import "global";
+@import "fonts";
+
+.header__top {
+    background-color: $light-bg;
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__button {
+    background-color: $blue;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 36px;
+    height: 36px;
+    width: 140px;
+    text-align: center;
+    margin-right: 51px;
+    a {
+        color: #fff;
+        font-size: 14px;
+        line-height: 36px;
+    }
+}
+.header__icons {
+display: none;
+}
 
 
+.header__user {
+    display: flex;
+}
+.user__img {
+    background-color: $grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 23px;
+}
+.user__text {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    p {
+        margin: 0;
+    }
+    .total {
+        color: $blue;
+    }
+}
 
+.header__catalog-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+.menu__list {
+    li {
+        display: inline-block;
+        text-transform: uppercase;
+        & + li {
+            margin-left: 35px;
+        }
+    }
+    a {
+        color: $color-text;
+        font-size: 15px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+    }
+}
+.header__search {
+    height: 46px;
+    position: relative;
+    display: inline-block;
+    textarea {
+        resize: none;
+        border: 1px solid #d9dfe5;
+        height: 100%;
+        width: 360px;
+        border-radius: 46px;
+        text-align: left;
+        line-height: 30px;
+        color: #898f96;
+        padding: 8px 0 8px 25px;
+    }
+    textarea:focus {
+        outline: none;
+    }
+    button {
+        background-color: $blue;
+        color: white;
+        border-radius: 46px;
+        height: 46px;
+        width: 70px;
+        border: 0;
+        position: absolute;
+        right: 0px;
+    }
+}
