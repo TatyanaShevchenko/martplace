@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MartPlace</title>
-    <script src="https://use.fontawesome.com/4ede1e066e.js"></script>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -26,9 +28,12 @@
                             <a href="#">Become a Seller</a>
                         </div>
                         <div class="header__icons">
-                            <div class="header__icons-item"><a href="#" class="alarm"><i class="far fa-bell"></i></a></div>
-                            <div class="header__icons-item"><a href="#" class="message"><i class="far fa-envelope"></i></a></div>
-                            <div class="header__icons-item"><a href="#" class="cart"><img src="../app/images/shopping-cart-solid.svg" alt=""></a></div>
+                            <div class="header__icons-item"><a href="#" class="alarm"><i class="far fa-bell"></i></a>
+                            </div>
+                            <div class="header__icons-item"><a href="#" class="message"><i
+                                        class="far fa-envelope"></i></a></div>
+                            <div class="header__icons-item"><a href="#" class="cart"><img
+                                        src="../app/images/shopping-cart-solid.svg" alt=""></a></div>
                         </div>
                         <div class="header__user">
                             <div class="user__img">
@@ -79,8 +84,9 @@
                         </nav>
                     </div>
                     <div class="header__search">
-<textarea name="" id="" cols="30" rows="1" placeholder="Search product here..."></textarea>
-<button><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <textarea name="" id="" cols="30" rows="1" placeholder="Search product here..."
+                            required></textarea>
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>
@@ -88,6 +94,50 @@
 
     </header>
 
+    <section class="slider" style="background-image: url(./images/slider_bg.jpg);">
+        <div class="slider__gradient">
+            <div class="container">
+                <div class="slider__inner">
+                    <div class="slider__title">Create Your Own<br>
+                        <span>Digital Product Marketplace</span></div>
+                    <div class="slider__text">MartPlace is the most powerful, & customizable template for Easy Digital
+                        Downloads Products</div>
+                    <div class="slider__buttons">
+                        <a href="#" class="slider__btn active">View All Products</a>
+                        <a href="#" class="slider__btn">Popular Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="search__form">
+        <div class="container">
+            <div class="box">
+            <div class="search__form-bg search__form-bg1"></div>
+            <div class="search__form-bg search__form-bg2"></div>
+            <div class="search__form-bg search__form-inner">
+                <form action="">
+                    <div class="form-container">
+                        <input type="text" placeholder="Search your products..." required>
+                        <div class="search__form-select">
+                            <select>
+                                <option selected disabled>All Categories</option>
+                                <option value="Category 1">Category 1</option>
+                                <option value="Category 2">Category 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit">Search Now</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="https://use.fontawesome.com/4ede1e066e.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
