@@ -122,8 +122,8 @@
                     <div class="form-container">
                         <input type="text" placeholder="Search your products..." required>
                         <div class="search__form-select">
-                            <select>
-                                <option selected disabled>All Categories</option>
+                            <select class="select">
+                                <option disabled>All Categories</option>
                                 <option value="Category 1">Category 1</option>
                                 <option value="Category 2">Category 2</option>
                             </select>
@@ -170,11 +170,35 @@
             </div>
         </div>
     </section>
+    <section id="bg" class="featured-products">
+        <div class="container">
+            <div class="featured-products__inner">
+                <div class="title">Weekly Featured Products</div>
+                <div class="product">
+                    <div class="product__image"></div>
+                    <div class="product__description">
+                        <div class="product__title"></div>
 
-    <script src="https://use.fontawesome.com/4ede1e066e.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <select class="select" name="language">
+        <option disabled>Выбрать</option>
+        <option value="HTML">HTML</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+    </select>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script> -->
     <script src="js/libs.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
