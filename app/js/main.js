@@ -1,5 +1,8 @@
 $(function(){
-    
+    $('.featured-product-slider').slick({
+
+      });
+      
     $('.select').each(function() {
         const _this = $(this),
             selectOption = _this.find('option'),

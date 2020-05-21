@@ -370,27 +370,28 @@
 .one-pic-slider {
     background-color: #eff1f5;
     .slider__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .arrows {
             background-color: $violet;
             border-radius: 45px;
-            position: absolute;
+            position: relative;
             width: 110px;
             height: 45px;
-            right: 30px;
-            top: 30px;
         }
     }
 
     //start product
     .product__item {
-        display: flex;
+        display: flex !important;
         min-height: 450px;
         border-radius: 4px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
         &-image {
             min-width: 555px;
-            width: 100%;
+            min-height: 450px;
             display: block;
             background-position: center;
             background-repeat: no-repeat;
@@ -440,7 +441,6 @@
                 margin: 36px 7px 36px 0;
             }
         }
-
         &-bottom {
             margin: 25px 0;
             display: flex;
@@ -448,9 +448,9 @@
             .bottom-box {
                 display: flex;
             }
-             .bottom-box-item+.bottom-box-item {
-            margin-left: 20px;
-}
+            .bottom-box-item + .bottom-box-item {
+                margin-left: 20px;
+            }
             .price {
                 color: #fff;
                 background-color: $blue;
@@ -459,7 +459,28 @@
                 padding: 0 20px;
             }
         }
-       
     }
     //end product
+
+    .featured-product-slider {
+        position: relative;
+    }
+    button.slick-arrow {
+        position: absolute;
+        top: -116px;
+        background: none;
+        background-repeat: no-repeat;
+        border: none;
+        width: 8px;
+        height: 16px;
+        font-size: 0;
+    }
+    button.slick-prev {
+        right: 99px;
+        background-image: url(../images/1-item-slider/arrow-left.png);
+    }
+    button.slick-next {
+        right: 51px;
+        background-image: url(../images/1-item-slider/arrow-right.png);
+    }
 }
