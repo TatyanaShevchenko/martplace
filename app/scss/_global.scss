@@ -59,6 +59,14 @@ a.main-button active {
   border: 1px solid #fff;
   color: #fff;
 }
+.blue-button{
+  background-color: $blue;
+
+}
+.button-wrapper{
+  text-align: center;
+  padding: 30px 10px 0 10px;
+}
 .featured-product-slider {
   position: relative;
 }

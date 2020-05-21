@@ -452,6 +452,35 @@
 }
 
 //end product
+.new-items {
+    .types{
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 0px rgba(108,111,115,0.1);
+        margin-bottom: 50px;
+        margin-top: -20px;
+    }
+    .product__type{
+        border: none;
+        line-height: 30px;
+        border-radius: 15px;
+        padding: 0 20px;
+        background-color: $light-grey;
+        color: #747b86;
+        cursor: pointer;
+
+        &.active{
+            color: #fff;
+            background-color: $blue;
+        }
+        &:hover{
+            background-color: rgba($color: #0674ec, $alpha: 0.1);
+            color:$blue;
+        }
+    }
+   
+}
 .new-items__box{
     display: flex;
     flex-wrap: wrap;
