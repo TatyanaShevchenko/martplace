@@ -354,6 +354,8 @@
     transform: rotate(180deg);
 }
 
+
+
 .one-pic-slider {
     background-color: #eff1f5;
     .slider__nav {
@@ -361,11 +363,16 @@
         justify-content: space-between;
         align-items: center;
         .arrows {
-            background-color: $violet;
             border-radius: 45px;
             position: relative;
             width: 110px;
             height: 45px;
+        }
+        .violet{
+            background-color: $violet; 
+        }
+        .blue{
+            background-color: $blue;
         }
     }
 }

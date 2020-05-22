@@ -2,6 +2,11 @@ $(function(){
     $('.featured-product-slider').slick({
 
       });
+
+      $('.followers-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });  
       
     $('.select').each(function() {
         const _this = $(this),
