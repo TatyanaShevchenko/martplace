@@ -7,7 +7,8 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 1
     });  
-      
+    var mixer = mixitup('.new-items__box');
+
     $('.select').each(function() {
         const _this = $(this),
             selectOption = _this.find('option'),

@@ -58,6 +58,7 @@ a.main-button active {
 .main-button {
   border: 1px solid #fff;
   color: #fff;
+  cursor: pointer;
 }
 .blue-button{
   background-color: $blue;
@@ -92,3 +93,4 @@ button.slick-next {
 .new-items {
   background-color: #f6f7fb;
 }
+
