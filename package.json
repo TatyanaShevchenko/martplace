@@ -24,6 +24,7 @@
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
+    "rateyo": "^2.3.5",
     "slick-carousel": "^1.8.1"
   }
 }

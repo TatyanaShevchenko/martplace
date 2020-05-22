@@ -8,6 +8,28 @@ $(function(){
         slidesToScroll: 1
     });  
     var mixer = mixitup('.new-items__box');
+    $(function () {
+ 
+        $(".rating").rateYo({
+          "rating": 4.6,
+          "starWidth": "15px",
+          "normalFill": "transparent",
+          "ratedFill": "#ffc000",
+          "readOnly": true,
+       
+        });
+
+        
+        $(".rating-mini").rateYo({
+            "rating": 4.6,
+            "starWidth": "12px",
+            "normalFill": "#eff1f5",
+            "ratedFill": "#ffc000",
+            "readOnly": true,
+         
+          });
+       
+      });
 
     $('.select').each(function() {
         const _this = $(this),
