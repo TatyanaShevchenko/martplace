@@ -5,4 +5,17 @@ $grey: #7c7979;
 $light-grey:#f1f3f6;
 $bg-blue: #274acd;
 $violet: #7347c1;
+@mixin f200 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 200;
+}
 
+@mixin f500 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+}
+
+@mixin f700 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
