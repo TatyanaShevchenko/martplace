@@ -644,7 +644,7 @@
 .why-choose {
     background-color: #fff;
     &__inner {
-        margin: 120px 0;
+        padding: 120px 0;
         text-align: center;
     }
     &__title {
@@ -787,6 +787,7 @@
     &__whois {}
     &__name {
         font-size: 20px;
+        @include f500;
     }
     &__icon {
         background-image: url(../images/icons/feedback/bubble.png);
@@ -796,3 +797,84 @@
 }
 
 //end feedback
+//latest news
+.latest-news {
+    background-color: #eff1f5;
+    &__item {
+        background-color: #fff;
+        max-width: 360px;
+        border-radius: 4px;
+        text-align: left;
+    }
+    &__img {
+        min-height: 230px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4px 4px 0 0;
+    }
+    &__content {
+        padding: 30px;
+        border-bottom: 1px solid #eff1f5;
+    }
+    &__content-title {
+        @include f500;
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+    &__content-bottom {
+        padding: 18px 5px;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        .bottom-date {
+            width: 50%;
+            text-align: center;
+            border-right: 1px solid #eff1f5;
+            position: relative;
+        }
+        .bottom-date::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 20px;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/icons/blog/clock.png);
+            background-repeat: no-repeat;
+        }
+        .bottom-info {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            .comments {
+                position: relative;
+            }
+            .comments::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/icons/blog/bubble.png);
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 14px;
+                top: 8px;
+                left: -22px;
+            }
+            .looks {
+                position: relative;
+            }
+            .looks::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/icons/blog/eye.png);
+                background-repeat: no-repeat;
+                width: 17px;
+                height: 9px;
+                top: 10px;
+                left: -22px;
+            }
+        }
+    }
+}
+
+//end latest news
