@@ -699,4 +699,100 @@
     }
 }
 
-//why-choose end
+// why-choose end
+// sell-and-buy
+.sell-and-buy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 560px;
+    .sell {
+        background-image: url(../images/sell_and_buy/blue_bg.jpg);
+    }
+    .buy {
+        background-image: url(../images/sell_and_buy/violet_bg.jpg);
+    }
+    &__bg {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__inner {
+        margin: 100px auto;
+        max-width: 535px;
+        text-align: center;
+        color: #fff;
+    }
+    &__image {
+        height: 100px;
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+    &__btn {
+        border-radius: 56px;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 19px 30px;
+        background-color: #fff;
+    }
+    .sell-btn {
+        color: $blue;
+    }
+    .buy-btn {
+        color: $violet;
+    }
+}
+
+// end sell-and-buy
+//feedback
+.our-clients-feedback__item {
+    background-color: #fff;
+    border-left: 2px solid $blue;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    max-width: 555px;
+    text-align: left;
+    margin-bottom: 60px;
+    &__inner {
+        margin: 50px 45px 50px 40px;
+    }
+}
+
+.our-clients-feedback {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 28px;
+        //align-items: center;
+        .about-client {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    &__whois {}
+    &__name {
+        font-size: 20px;
+    }
+    &__icon {
+        background-image: url(../images/icons/feedback/bubble.png);
+        background-repeat: no-repeat;
+        width: 60px;
+    }
+}
+
+//end feedback
