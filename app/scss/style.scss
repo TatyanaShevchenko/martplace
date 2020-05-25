@@ -927,8 +927,30 @@
 }
 
 .footer {
-    &__logo {
-        color: #fff;
+    &__col-logo {
+        font-size: 24px;
+        line-height: 24px;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        position: relative;
+        @include f700;
+        a.logo-link {
+            color: #fff;
+        }
+        span {
+            color: $blue;
+        }
+    }
+    &__col-logo::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/footer-logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40px;
+        width: 40px;
+        left: -50px;
+        top: -8px;
     }
     &__inner {
         padding: 125px 0;
@@ -939,9 +961,6 @@
     &__content {
         background-color: #262b30;
     }
-    .svg_white {
-        margin-right: 10px;
-    }
     &__col {
         a {
             color: #ababab;
@@ -950,10 +969,6 @@
             font-size: 15px;
             line-height: 26px;
             margin-bottom: 20px;
-        }
-        .contact-flexbox {
-            display: flex;
-            align-items: center;
         }
     }
     &__logo {
@@ -967,5 +982,16 @@
     }
     .column-1 {
         max-width: 270px;
+    }
+    .contact-flexbox {
+        display: flex;
+        align-items: center;
+    }
+    svg path {
+        fill: #fff !important;
+    }
+    svg {
+        margin-right: 10px;
+        min-width: 17px;
     }
 }
