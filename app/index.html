@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MartPlace</title>
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('../fonts/icomoon.eot') format("eot"), url('../fonts/icomoon.eot?5p4k6a#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?5p4k6a') format('truetype'), url('fonts/icomoon.woff?5p4k6a') format('woff'), url('fonts/icomoon.svg?5p4k6a#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -85,8 +93,13 @@
                         </nav>
                     </div>
                     <div class="header__search">
-                        <textarea name="" id="" cols="30" rows="1" placeholder="Search product here..." required></textarea>
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input class="header__search search" type="text" placeholder="Search product here...">
+                        <button type="submit">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                                <path fill="#000000" d="M18.869 19.162l-5.943-6.484c1.339-1.401 2.075-3.233 2.075-5.178 0-2.003-0.78-3.887-2.197-5.303s-3.3-2.197-5.303-2.197-3.887 0.78-5.303 2.197-2.197 3.3-2.197 5.303 0.78 3.887 2.197 5.303 3.3 2.197 5.303 2.197c1.726 0 3.362-0.579 4.688-1.645l5.943 6.483c0.099 0.108 0.233 0.162 0.369 0.162 0.121 0 0.242-0.043 0.338-0.131 0.204-0.187 0.217-0.503 0.031-0.706zM1 7.5c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5-6.5-2.916-6.5-6.5z"></path>
+                                </svg>
+                                
+                        </button>
                     </div>
                 </div>
             </div>
@@ -213,8 +226,10 @@
                                 <div class="product__item-bottom">
                                     <div class="bottom-box">
                                         <div class="bottom-box-item price">$10 - $50</div>
-                                        <div class="bottom-box-item likes">likes</div>
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item likes">
+                                            46
+                                        </div>
+                                        <div class="bottom-box-item buy">634</div>
                                     </div>
                                     <div class="bottom-box">
                                         <div id="rateyo" class="bottom-box-item rating "></div>
@@ -254,8 +269,8 @@
                                 <div class="product__item-bottom">
                                     <div class="bottom-box">
                                         <div class="bottom-box-item price">$10 - $50</div>
-                                        <div class="bottom-box-item likes">likes</div>
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item likes">90</div>
+                                        <div class="bottom-box-item buy">246</div>
                                     </div>
                                     <div class="bottom-box">
                                         <div id="rateyo" class="bottom-box-item rating"></div>
@@ -280,9 +295,27 @@
         <div class="container">
             <div class="new-items__inner">
                 <div class="feature">
-                    <div class="slider__nav">
+                    <div class="slider__nav new-items__filter">
                         <div class="title">Newest Released Products</div>
-                        <div class="arrows"></div>
+
+                        <div class="new-items__filter-box">
+                            <div class="new-items__filter-title">Filter by:</div>
+                            <div class="new-items__filter-menu">
+                                <a class="new-items__filter-icon"></a>
+                                <div class="new-items__filter-categories">
+                                    <ul>
+                                        <li class="new-items__filter-category"><button type="button" data-sort="order:trending">Trending items</button></li>
+                                        <li class="new-items__filter-category"><button type="button" data-sort="order:bestseller">Best seller</button></li>
+                                        <li class="new-items__filter-category"><button type="button" data-sort="order:rating">Best rating</button></li>
+                                        <li class="new-items__filter-category"><button type="button" data-sort="price:asc">Low price</button></li>
+                                        <li class="new-items__filter-category"><button type="button" data-sort="price:desc">High price</button></li>
+                                    </ul>
+
+                                </div>
+                                <img class="new-items__filter-poly" src="./images/filter_by_polygon.png" alt="">
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="types">
@@ -297,7 +330,7 @@
                     </div>
                     <div class="new-items__box">
 
-                        <div class="product__item-mini mix category-wordpress">
+                        <div class="product__item-mini mix category-wordpress" data-price="14.99">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -331,19 +364,19 @@
                                 </div>
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item price-mini">$14.99</div>
+                                        <div class="bottom-box-item likes">90</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">246</div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product__item-mini mix category-joomla">
+                        <div class="product__item-mini mix category-joomla" data-price="15.99">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -377,19 +410,19 @@
                                 </div>
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item price-mini">$15.99</div>
+                                        <div class="bottom-box-item likes">90</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">246</div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product__item-mini mix category-wordpress">
+                        <div class="product__item-mini mix category-wordpress" data-price="16.99">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -423,19 +456,19 @@
                                 </div>
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item price-mini">$16.99</div>
+                                        <div class="bottom-box-item likes">90</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">246</div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product__item-mini mix category-software">
+                        <div class="product__item-mini mix category-software" data-price="20">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -470,18 +503,18 @@
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
                                         <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item likes">90</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">245</div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product__item-mini mix category-site-template">
+                        <div class="product__item-mini mix category-site-template" data-price="20">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -516,18 +549,18 @@
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
                                         <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item likes">10</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">15</div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product__item-mini mix category-psd-template">
+                        <div class="product__item-mini mix category-psd-template" data-price="20">
                             <div class="product__item-mini-image" style="background-image: url(./images/content/product_360_230.jpg);">
                                 <div class="info-buttons">
                                     <a class="info-btn main-button">More Info</a>
@@ -562,11 +595,11 @@
                                 <div class="bottom-mini">
                                     <div class="bottom-box">
                                         <div class="bottom-box-item price-mini">$20</div>
-                                        <div class="bottom-box-item likes">likes</div>
+                                        <div class="bottom-box-item likes">52</div>
                                         <div id="rateyo" class="bottom-box-item rating-mini"></div>
                                     </div>
                                     <div class="bottom-box">
-                                        <div class="bottom-box-item buy">buys</div>
+                                        <div class="bottom-box-item buy">224</div>
                                     </div>
 
                                 </div>
@@ -1240,8 +1273,7 @@
                 <div class="footer__inner">
 
                     <div class="footer__col column-1">
-                        <div class="footer__col-logo">
-                            <!-- <div class="footer__logo"></div> -->
+                        <div class="footer__col-logo footer__col-title">
                             <a class="logo-link">Mart<span>Place</span></a>
                         </div>
                         <div class="footer__col-text">
@@ -1260,7 +1292,8 @@
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
                                     <path fill="#000000" d="M17.5 6h-16c-0.827 0-1.5 0.673-1.5 1.5v9c0 0.827 0.673 1.5 1.5 1.5h16c0.827 0 1.5-0.673 1.5-1.5v-9c0-0.827-0.673-1.5-1.5-1.5zM17.5 7c0.030 0 0.058 0.003 0.087 0.008l-7.532 5.021c-0.29 0.193-0.819 0.193-1.109 0l-7.532-5.021c0.028-0.005 0.057-0.008 0.087-0.008h16zM17.5 17h-16c-0.276 0-0.5-0.224-0.5-0.5v-8.566l7.391 4.927c0.311 0.207 0.71 0.311 1.109 0.311s0.798-0.104 1.109-0.311l7.391-4.927v8.566c0 0.276-0.224 0.5-0.5 0.5z"></path>
                                     </svg>
-                                <div>support@aazztech.com</div>
+                                <div>
+                                    <a href="mailto:support@aazztech.com">support@aazztech.com</a> </div>
                             </div>
 
 
@@ -1276,22 +1309,83 @@
 
                     </div>
 
-                    <div class="footer__col">
+                    <div class="footer__col column-2">
                         <div class="footer__col-title">
                             Our Company
                         </div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">How It Work</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Affiliates</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#"> Testimonials</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Copyright Notice</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
 
                     </div>
 
-                    <div class="footer__col">
+                    <div class="footer__col column-3">
                         <div class="footer__col-title">
                             Help Support
                         </div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#">Support Forum</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Support Policy</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#"> Refund Policy</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#"> FAQs</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#"> Buyers Faq</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#">Sellers Faq</a>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="footer__col">
+                    <div class="footer__col column-4">
                         <div class="footer__col-title">
                             Newsletter
+                        </div>
+                        <div class="footer__col-text">
+                            Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!
+                        </div>
+                        <div class="footer__subscribe">
+                            <input class="subscribe-field subscribe" type="text" placeholder="Enter email">
+                            <input class="subscribe-btn subscribe" type="submit" value="Submit">
+                        </div>
+                        <div class="footer__socials">
+                            <div class="footer__social-icon facebook-color"></div>
+                            <div class="footer__social-icon twitter-color"></div>
+                            <div class="footer__social-icon google-color"></div>
+                            <div class="footer__social-icon pinterest-color"></div>
+                            <div class="footer__social-icon linkedin-color"></div>
+                            <div class="footer__social-icon dribble-color"></div>
                         </div>
                     </div>
 
@@ -1303,7 +1397,7 @@
         <div class="footer__copy">
             <div class="container">
                 <div class="footer__copy-text">
-                    ©2017 MartPlace. All rights reserved. Created by AazzTech
+                    ©2017 <span>MartPlace</span> . All rights reserved. Created by <span><a href="#">AazzTech</a> </span>
                 </div>
             </div>
         </div>
