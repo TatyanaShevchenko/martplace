@@ -471,7 +471,7 @@
 }
 
 .rating-mini {
-    margin-left: 15px;
+    margin-left: 1 5px;
 }
 
 .buy::before {
@@ -807,7 +807,7 @@
     .sell {
         background-image: url(../images/sell_and_buy/blue_bg.jpg);
     }
-    .buy {
+    .buysection {
         background-image: url(../images/sell_and_buy/violet_bg.jpg);
     }
     &__bg {
@@ -1145,6 +1145,7 @@
         width: 43px;
         height: 43px;
         border-radius: 50%;
+        cursor: pointer;
     }
     .facebook-color {
         background-color: #395799;
