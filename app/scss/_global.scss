@@ -2,6 +2,25 @@ html {
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
 *,
 *::before,
 *::after {
@@ -57,7 +76,7 @@ a.main-button:hover,
 a.main-button active {
     background-color: #fff;
     color: $blue;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .main-button {
@@ -101,11 +120,50 @@ button.slick-next {
     background-image: url(../images/1-item-slider/arrow-right.png);
 }
 
-.new-items {
-    background-color: #f6f7fb;
-}
+.new-items {}
 
 #rateyo {
     stroke: #ffc000;
     stroke-width: 30;
+}
+
+.bold {
+    @include f700;
+}
+
+.breadcrumbs {
+    &__inner {
+        a,
+        span {
+            color: #fff;
+        }
+        ul {
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+    &__list {
+        li {
+            display: inline-block;
+            position: relative;
+            @include f700;
+            &:last-child {
+                font-weight: 400;
+            }
+            &+li {
+                padding-left: 20px;
+                &::before {
+                    content: "/";
+                    @include f700;
+                    position: absolute;
+                    left: 6px;
+                }
+            }
+        }
+    }
+    &__center {
+        ul {
+            padding-bottom: 35px;
+        }
+    }
 }
