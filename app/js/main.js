@@ -95,4 +95,16 @@ $(function() {
         "readOnly": true,
 
     });
+
+    $(".list-icon").on('click', function() {
+        $(".product__item-mini").addClass('product__item-page-list');
+        $(".list-icon").addClass('active');
+        $(".grid-icon").removeClass('active');
+
+    });
+    $(".grid-icon").on('click', function() {
+        $(".product__item-mini").removeClass('product__item-page-list');
+        $(".grid-icon").addClass('active');
+        $(".list-icon").removeClass('active');
+    });
 });
