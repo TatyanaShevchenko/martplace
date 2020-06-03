@@ -7,6 +7,16 @@
             
             .header__top {
                 background-color: $light-bg;
+                .blue-triangle {
+                    top: 69.5px;
+                    right: 0;
+                    background-image: url(../images/header-menu/Polygon_blue.png);
+                    width: 66px;
+                    height: 0;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    z-index: 2;
+                }
             }
             
             .header__top-inner {
@@ -38,11 +48,209 @@
             }
             
             .header__icons {
-                display: none;
+                display: flex;
+                margin-right: 50px;
+                color: #7e8fa1;
+                a {
+                    display: inline-flex;
+                }
+                &-item {
+                    &+& {
+                        margin-left: 35px;
+                    }
+                }
+                .notification,
+                .message,
+                .cart {
+                    position: relative;
+                }
+                .notification-circle {
+                    position: absolute;
+                    top: -15px;
+                    left: 9px;
+                    min-width: 22px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 1px 6px;
+                    @include f500;
+                    color: #fff;
+                    border-radius: 22px;
+                }
+                .red {
+                    background-color: #ff6a6c;
+                }
+                .green {
+                    background-color: #62d03b;
+                }
+                .blue {
+                    background-color: $blue;
+                }
             }
             
             .header__user {
                 display: flex;
+                align-items: center;
+                height: 100px;
+                position: relative;
+                .user-menu {
+                    max-height: 0;
+                    overflow: hidden;
+                    border: none;
+                    position: absolute;
+                    top: 100px;
+                    right: 0;
+                }
+                &:hover {
+                    .blue-triangle {
+                        height: 65px;
+                    }
+                    .user-menu {
+                        max-height: 600px;
+                        transition: all .8s;
+                        border-top: 1px solid $blue;
+                    }
+                }
+            }
+            
+            .header__notification {
+                display: flex;
+                align-items: center;
+                height: 100px;
+                position: relative;
+            }
+            
+            .header__message {
+                display: flex;
+                align-items: center;
+                height: 100px;
+                position: relative;
+            }
+            
+            .header__cart {
+                position: relative;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                .cart-menu {
+                    max-height: 0;
+                    overflow: hidden;
+                    border: none;
+                    position: absolute;
+                    top: 100px;
+                    right: -40px;
+                }
+                &:hover {
+                    .blue-triangle {
+                        height: 65px;
+                        right: -25px;
+                    }
+                    .cart-menu {
+                        max-height: 600px;
+                        width: 400px;
+                        transition: all .8s;
+                        border-top: 1px solid $blue;
+                    }
+                }
+                .cart-menu-buttons {
+                    display: flex;
+                    .cart-menu-btn {
+                        a {
+                            color: #fff;
+                        }
+                        width: 50%;
+                        padding: 15px 0;
+                        text-align: center;
+                    }
+                    .gotocart {
+                        background-color: $violet;
+                    }
+                    .gotocheckout {
+                        background-color: $blue;
+                    }
+                }
+                .menu-total {
+                    font-size: 18px;
+                    color: #000;
+                    @include f500;
+                    text-align: right;
+                    padding: 25px;
+                    &-title {
+                        margin-right: 24px;
+                    }
+                }
+                .lnr-trash:before {
+                    position: absolute;
+                    top: 7px;
+                    left: 8px;
+                }
+                .menu-list-item {
+                    display: flex;
+                    padding: 25px;
+                    border-bottom: 1px solid #efedf3;
+                    &-image {
+                        margin-right: 15px;
+                        max-width: 80px;
+                        max-height: 70px;
+                    }
+                    &-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    &-del {
+                        position: relative;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        color: #818c98;
+                        background-color: rgba($color: #7347c1, $alpha: .1);
+                    }
+                    &-options {
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+            
+            a.menu-list-item-title {
+                max-width: 200px;
+                font-size: 16px;
+                line-height: 22px;
+                @include f500;
+            }
+            
+            .header__menu-dropdown {
+                z-index: 2;
+                color: #54667a;
+                background-color: #fff;
+                border-top: 1px solid $blue;
+                position: relative;
+                .header__menu-font {
+                    font-family: "Quicksand-Regular";
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+                .menu-list:first-child {
+                    margin-top: 16px;
+                }
+                .menu-list:last-child {
+                    margin-bottom: 16px;
+                }
+                li {
+                    padding: 8px 16px;
+                    margin: 0 20px;
+                    width: 230px;
+                    &:hover {
+                        color: #fff;
+                        background-color: $blue;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
             }
             
             .user__img {
@@ -684,13 +892,14 @@
                     display: flex;
                     justify-content: space-between;
                 }
-                .price-mini {
-                    color: $blue;
-                    background-color: rgba($color: #0674ec, $alpha: 0.1);
-                    border-radius: 30px;
-                    display: inline-block;
-                    padding: 0 18px;
-                }
+            }
+            
+            .price-mini {
+                color: $blue;
+                background-color: rgba($color: #0674ec, $alpha: 0.1);
+                border-radius: 30px;
+                display: inline-block;
+                padding: 0 16px;
             }
             
             //product-mini end
@@ -1479,11 +1688,6 @@
                         .info {
                             margin: 0 20px;
                         }
-                        .product__item-type {
-                            a {
-                                color: $violet;
-                            }
-                        }
                         .product__item-mini-description {
                             min-height: 155px;
                         }
@@ -1544,6 +1748,10 @@
                         }
                     }
                 }
+            }
+            
+            a.product__item-type-text {
+                color: $violet;
             }
             
             // start price range
