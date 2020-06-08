@@ -131,15 +131,16 @@
   .header__catalog-inner .header__menu {
     min-width: 250px;
     height: 270px;
-   z-index: 2;}
+   z-index: 2;
+  }
   .header__user{
     .blue-triangle {
       display: none;
     }
   }
-  .user-menu{
-    display: none;
-  }
+  .header__user .user-menu{
+     display: none;
+   }
   .menu__list-item .catalog-podmenu {
     width: -webkit-fill-available;
     top: 50px;
