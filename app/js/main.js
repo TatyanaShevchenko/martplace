@@ -103,7 +103,7 @@ $(function() {
     });
 
     $(".menu__btn").on('click', function() {
-        $(".menu__list").slideToggle();
+        $(".menu__list-item").slideToggle();
     });
 
     $(".header__btn-menu").on('click', function() {
