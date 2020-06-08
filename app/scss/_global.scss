@@ -184,7 +184,14 @@ button.slick-next {
         }
     }
     &__center {
-        ul {
+        .breadcrumbs__list {
+            padding-bottom: 35px;
+        }
+    }
+    &__left{
+        .breadcrumbs__list{
+            text-align: left;
+            padding-top: 60px;
             padding-bottom: 35px;
         }
     }
