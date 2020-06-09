@@ -148,7 +148,9 @@ button.slick-next {
     stroke: #ffc000;
     stroke-width: 30;
 }
-
+.medium{
+    @include f500;
+}
 .bold {
     @include f700;
 }
