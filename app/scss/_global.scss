@@ -115,14 +115,22 @@ a.main-button active {
     background-color: $blue;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
-
+.blue-button:hover{
+    transition: all 0.5s;
+    background-color: #fff;
+    color: $blue;
+}
 .violet-button {
     background-color: $violet;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
-a.violet-button:hover{
+
+.violet-button:hover{
+    transition: all 0.5s;
     color: $violet;
+    background-color: #fff;
 }
+
 
 
 
