@@ -71,6 +71,8 @@ body {
     overflow-X: hidden;
 }
 
+
+
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -114,6 +116,30 @@ a.main-button active {
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
+.violet-button {
+    background-color: $violet;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+a.violet-button:hover{
+    color: $violet;
+}
+
+
+
+//text color
+.blue{
+    color: $blue;
+}
+
+.violet{
+    color: $violet;
+}
+
+.light-blue{
+    color: #58c9e9;
+}
+
+// end text color
 .button-wrapper {
     text-align: center;
     padding: 30px 10px 0 10px;
