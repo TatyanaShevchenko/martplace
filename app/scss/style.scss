@@ -2540,4 +2540,106 @@ a.product__item-type-text {
 //end product page aside
 //product page end
 
+//login page
+.login{
+  background-color: #eff1f5;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  &__container{
+    background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      max-width: 555px;
+      width: 100%;
+      margin: 0 auto;
+  }
+  &__inner{
+    padding-top: 60px;
+
+  }
+  &__top{
+    text-align: center;
+    border-bottom: 1px solid #e8ebf0;
+    &-title{
+      font-size: 26px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+    &-text{
+      color: #555555;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  &__form{
+    padding:30px 50px 40px 50px;
+    .login-btn{
+      width: 180px;
+      height: 50px;
+      border-radius: 50px;
+      display: block;
+      margin-top: 30px;
+    }
+    .label{
+      display: block;
+      margin-bottom: 15px;
+      @include f500;
+    }
+    label.remember{
+      color: #555555;
+    }
+    .input-data{
+      font-size: 16px;
+      border: none;
+      display: block;
+      width: 100%;
+      background-color: #f4f5f8;
+      color: #898f96;
+      padding-left: 20px;
+      height: 50px;
+      margin-bottom: 30px;
+    }
+    .custom-checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .custom-checkbox+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+    .custom-checkbox+label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background-color: $blue;
+      border: none;
+      border-radius: 20px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    .custom-checkbox:checked+label::before {
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+  }
+  &__links{
+    padding:0 50px 40px 50px ;
+  }
+  &__links{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//end login page
+
 @import "media";
