@@ -99,8 +99,8 @@ body {
     }
 }
 
-a.main-button:hover,
-a.main-button active {
+.main-button:hover,
+.main-button active {
     background-color: #fff;
     color: $blue;
     transition: all 0.5s;
@@ -109,12 +109,15 @@ a.main-button active {
 .main-button {
     border: 1px solid #fff;
     color: #fff;
+    border-radius: 50px;
     cursor: pointer;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    
 }
 
 .blue-button {
     background-color: $blue;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    //box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 .blue-button:hover{
     transition: all 0.5s;
@@ -123,13 +126,26 @@ a.main-button active {
 }
 .violet-button {
     background-color: $violet;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+   // box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .violet-button:hover{
     transition: all 0.5s;
     color: $violet;
     background-color: #fff;
+}
+
+.white-button{
+color: $blue;
+padding:12px 35px;
+background-color: #fff;
+}
+
+.white-button:hover,
+.white-button.active{
+    transition: all 0.5s;
+    background-color: $blue;
+    color: #fff;
 }
 
 
@@ -159,6 +175,7 @@ a.main-button active {
 }
 
 button.slick-arrow {
+    cursor: pointer;
     position: absolute;
     top: -116px;
     background: none;
