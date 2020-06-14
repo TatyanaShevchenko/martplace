@@ -484,14 +484,66 @@ a.menu-list-item-title {
       left: 0;
       text-transform: none;
     }
+    .pages-podmenu {
+      display: flex;
+      width: 1140px;
+      max-height: 0;
+      overflow: hidden;
+      border: none;
+      position: absolute;
+      top: 80px;
+      left: -455px;
+      text-transform: none;
+      .pages-podmenu-col1 {
+        max-width: 440px;
+        width: 100%;
+      }
+      .pages-podmenu-col2 {
+        max-width: 180px;
+        width: 100%;
+      }
+      .lists-box {
+        display: flex;
+        margin-bottom: 75px;
+        margin-top: 25px;
+        .menu-list.pages-list {
+          width: 200px;
+        }
+        li {
+          padding-right: 10px;
+        }
+        li:hover {
+          background-color: transparent;
+          a {
+            color: $blue;
+          }
+        }
+        .menu-list:first-child {
+          margin-top: 0;
+        }
+      }
+  
+    }
     &:hover {
       .catalog-podmenu {
         max-height: 600px;
         transition: all 0.8s;
         border-top: 1px solid $blue;
       }
+      .pages-podmenu {
+        max-height: 10000px;
+        border-top: 1px solid $blue;
+        transition: all 0.8s;
+      }
     }
   }
+  // .menu__list-item.pages:hover {
+  //   .pages-podmenu {
+  //     max-height: 10000px;
+  //     border-top: 1px solid $blue;
+  //     transition: all 0.8s;
+  //   }
+  // }
   // .menu__list-item+.menu__list-item {
   //     margin-left: 35px;
   // }
@@ -500,53 +552,8 @@ a.menu-list-item-title {
     font-size: 15px;
     @include f500;
   }
-  .pages-podmenu {
-    display: flex;
-    .pages-podmenu-col1 {
-      max-width: 440px;
-      width: 100%;
-    }
-    .pages-podmenu-col2 {
-      max-width: 180px;
-      width: 100%;
-    }
-    .lists-box {
-      display: flex;
-      margin-bottom: 75px;
-      margin-top: 25px;
-      .menu-list.pages-list {
-        width: 200px;
-      }
-      li {
-        padding-right: 10px;
-      }
-      li:hover {
-        background-color: transparent;
-        a {
-          color: $blue;
-        }
-      }
-      .menu-list:first-child {
-        margin-top: 0;
-      }
-    }
-    width: 1140px;
-    max-height: 0;
-    overflow: hidden;
-    border: none;
-    position: absolute;
-    top: 80px;
-    left: -455px;
-    text-transform: none;
-  }
-  .menu__list-item:hover {
-    transition: all 0.8s;
-    .pages-podmenu {
-      max-height: 10000px;
-      transition: all 0.8s;
-      border-top: 1px solid $blue;
-    }
-  }
+
+
   .catalog-podmenu-title {
     padding: 30px 10px 20px 30px;
     @include f500;
