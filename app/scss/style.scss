@@ -540,6 +540,7 @@ a.menu-list-item-title {
     text-transform: none;
   }
   .menu__list-item:hover {
+    transition: all 0.8s;
     .pages-podmenu {
       max-height: 10000px;
       transition: all 0.8s;
